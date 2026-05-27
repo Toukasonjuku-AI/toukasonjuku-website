@@ -1,0 +1,24 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# OneDrive
+~$*
+
+# Logs
+*.log
+npm-debug.log*
+
+# Claude Code local
+.claude/settings.local.json
+.claude/launch.json
+
+# Node (将来使う場合に備えて)
+node_modules/
+dist/
+.cache/
