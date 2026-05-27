@@ -71,8 +71,19 @@ em{font-style:normal;color:var(--c-peach-dk);font-weight:500}
   padding:0 var(--gutter);
   display:flex;align-items:center;justify-content:space-between;
 }
-.brand{display:flex;flex-direction:column;line-height:1;color:#fff;transition:color .4s var(--ease)}
+.brand{display:flex;align-items:center;gap:12px;line-height:1;color:#fff;transition:color .4s var(--ease)}
 .site-header.scrolled .brand{color:var(--c-ink)}
+.brand-logo{
+  width:44px;height:44px;
+  object-fit:contain;
+  filter:drop-shadow(0 2px 8px rgba(0,0,0,.25));
+  transition:width .4s var(--ease), height .4s var(--ease);
+}
+.site-header.scrolled .brand-logo{
+  width:38px;height:38px;
+  filter:none;
+}
+.brand-text{display:flex;flex-direction:column}
 .brand-jp{font-family:var(--f-jp);font-weight:700;font-size:22px;letter-spacing:.18em}
 .brand-en{font-family:var(--f-en);font-size:10px;letter-spacing:.4em;margin-top:6px;opacity:.7}
 
@@ -866,6 +877,14 @@ em{font-style:normal;color:var(--c-peach-dk);font-weight:500}
   gap:40px;
   padding-bottom:60px;
   border-bottom:1px solid rgba(255,255,255,.08);
+}
+.footer-logo{
+  width:72px;height:72px;
+  object-fit:contain;
+  margin-bottom:18px;
+  background:#fff;
+  border-radius:50%;
+  padding:6px;
 }
 .footer-brand .brand-jp{
   color:#fff;font-size:24px;letter-spacing:.18em;font-weight:700;
