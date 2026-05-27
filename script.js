@@ -55,20 +55,3 @@
   });
 })();
 
-/* ---- Contact form (mailto fallback) ---- */
-function handleContactSubmit(e) {
-  e.preventDefault();
-  const form = e.target;
-  const data = new FormData(form);
-  const name = data.get('name');
-  const email = data.get('email');
-  const org = data.get('org') || '（未記入）';
-  const message = data.get('message');
-
-  const subject = encodeURIComponent(`【お問い合わせ】${name}様より`);
-  const body = encodeURIComponent(
-    `お名前: ${name}\nメール: ${email}\nご所属: ${org}\n\n--- ご相談内容 ---\n${message}\n`
-  );
-  window.location.href = `mailto:toukasonjuku.ai@gmail.com?subject=${subject}&body=${body}`;
-  return false;
-}
