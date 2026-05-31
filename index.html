@@ -4,6 +4,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<!-- ===== 旧ドメイン → 新ドメイン リダイレクト ===== -->
+<script>
+  (function(){
+    if (location.hostname === "toukasonjuku-website.onrender.com") {
+      location.replace("https://www.momoshita.jp" + location.pathname + location.search + location.hash);
+    }
+  })();
+</script>
+
 <!-- ===== SEO ===== -->
 <meta name="google-site-verification" content="aghFpxrPpcszVVYsD2UyxsAY9lJyK1Myzg3m7SvMrMU" />
 <title>桃下村塾（とうかそんじゅく）</title>
@@ -12,7 +21,7 @@
 <meta name="author" content="桃下村塾 / TOUKA SONJUKU" />
 <meta name="robots" content="index, follow, nosnippet" />
 <meta name="theme-color" content="#c96b78" />
-<link rel="canonical" href="https://toukasonjuku-website.onrender.com/" />
+<link rel="canonical" href="https://www.momoshita.jp/" />
 
 <!-- ===== Favicon ===== -->
 <link rel="icon" href="favicon.ico" sizes="any" />
@@ -25,8 +34,8 @@
 <meta property="og:site_name" content="桃下村塾 / TOUKA SONJUKU" />
 <meta property="og:title" content="桃下村塾 ｜ 岡山から、社会を変革するリーダーを育てる。" />
 <meta property="og:description" content="AIとビジネスを実践的に学ぶ、岡山発の学生団体。簡単に、だけど本気で。AI時代を生き抜く力を。" />
-<meta property="og:url" content="https://toukasonjuku-website.onrender.com/" />
-<meta property="og:image" content="https://toukasonjuku-website.onrender.com/images/logo.png" />
+<meta property="og:url" content="https://www.momoshita.jp/" />
+<meta property="og:image" content="https://www.momoshita.jp/images/logo.png" />
 <meta property="og:image:alt" content="桃下村塾 公式フライヤー" />
 <meta property="og:locale" content="ja_JP" />
 
@@ -34,7 +43,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="桃下村塾 ｜ 岡山から、社会を変革するリーダーを育てる。" />
 <meta name="twitter:description" content="AIとビジネスを実践的に学ぶ、岡山発の学生団体。簡単に、だけど本気で。AI時代を生き抜く力を。" />
-<meta name="twitter:image" content="https://toukasonjuku-website.onrender.com/images/logo.png" />
+<meta name="twitter:image" content="https://www.momoshita.jp/images/logo.png" />
 
 <!-- ===== Structured Data (JSON-LD) ===== -->
 <script type="application/ld+json">
@@ -43,9 +52,9 @@
   "@type": "EducationalOrganization",
   "name": "桃下村塾",
   "alternateName": ["TOUKA SONJUKU", "とうかそんじゅく"],
-  "url": "https://toukasonjuku-website.onrender.com/",
-  "logo": "https://toukasonjuku-website.onrender.com/images/logo.png",
-  "image": "https://toukasonjuku-website.onrender.com/images/logo.png",
+  "url": "https://www.momoshita.jp/",
+  "logo": "https://www.momoshita.jp/images/logo.png",
+  "image": "https://www.momoshita.jp/images/logo.png",
   "description": "岡山大学を中心に2025年発足。AIとビジネスを実践的に学び、岡山から社会を変革するリーダーを育てる学生団体。",
   "foundingDate": "2025",
   "areaServed": {
