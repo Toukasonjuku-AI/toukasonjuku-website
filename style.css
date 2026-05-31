@@ -60,10 +60,17 @@ em{font-style:normal;color:var(--c-peach-dk);font-weight:500}
   padding:22px 0;
 }
 .site-header.scrolled{
-  background:rgba(255,255,255,.96);
-  box-shadow:0 1px 0 var(--c-line);
-  padding:14px 0;
+  background:linear-gradient(180deg,
+    rgba(255,255,255,.98) 0%,
+    rgba(255,255,255,.95) 48%,
+    rgba(255,255,255,.55) 80%,
+    rgba(255,255,255,0) 100%);
+  box-shadow:none;
+  padding:14px 0 30px;
   backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  -webkit-mask-image:linear-gradient(180deg, #000 0%, #000 50%, transparent 100%);
+  mask-image:linear-gradient(180deg, #000 0%, #000 50%, transparent 100%);
 }
 .header-inner{
   max-width:var(--max);
