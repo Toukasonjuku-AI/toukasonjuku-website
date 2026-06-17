@@ -12,19 +12,48 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // ---- Hamburger toggle ----
+  // ---- Hamburger toggle (mobile-safe scroll lock) ----
   const burger = document.getElementById('hamburger');
   const navMobile = document.getElementById('navMobile');
+  let savedScrollY = 0;
+
+  const lockScroll = () => {
+    savedScrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${savedScrollY}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+  };
+  const unlockScroll = () => {
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    window.scrollTo(0, savedScrollY);
+  };
+
+  const openMenu = () => {
+    burger.classList.add('open');
+    navMobile.classList.add('open');
+    lockScroll();
+  };
+  const closeMenu = () => {
+    burger.classList.remove('open');
+    navMobile.classList.remove('open');
+    unlockScroll();
+  };
+
   burger.addEventListener('click', () => {
-    burger.classList.toggle('open');
-    navMobile.classList.toggle('open');
-    document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+    if (navMobile.classList.contains('open')) closeMenu();
+    else openMenu();
   });
+
+  // close the menu when a nav link is tapped (runs before smooth-scroll handler)
   navMobile.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
-      burger.classList.remove('open');
-      navMobile.classList.remove('open');
-      document.body.style.overflow = '';
+      if (navMobile.classList.contains('open')) closeMenu();
     });
   });
 
