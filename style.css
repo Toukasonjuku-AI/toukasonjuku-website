@@ -542,6 +542,51 @@ em{font-style:normal;color:var(--c-peach-dk);font-weight:500}
   color:var(--c-mute);
 }
 
+/* ---- 理念の図解ブロック ---- */
+.phil-blocks{
+  margin-top:clamp(60px, 9vw, 110px);
+  display:flex;
+  flex-direction:column;
+  gap:clamp(50px, 8vw, 90px);
+}
+.phil-block{
+  display:grid;
+  grid-template-columns:1.05fr 1fr;
+  gap:clamp(30px, 5vw, 70px);
+  align-items:center;
+}
+.phil-block.reverse .phil-img{order:2}
+.phil-img{
+  border:1px solid var(--c-line);
+  background:#fff;
+  padding:clamp(10px, 1.5vw, 22px);
+  box-shadow:0 14px 40px -28px rgba(58,74,110,.35);
+}
+.phil-img img{width:100%;height:auto}
+.phil-text h3{
+  font-family:var(--f-jp);
+  font-weight:700;
+  font-size:clamp(21px, 2.4vw, 28px);
+  letter-spacing:.06em;
+  line-height:1.6;
+  color:var(--c-deep);
+  margin-bottom:22px;
+  padding-left:18px;
+  border-left:3px solid var(--c-peach);
+}
+.phil-text p{
+  margin-bottom:20px;
+  color:var(--c-ink-soft);
+  font-size:15.5px;
+  letter-spacing:.04em;
+}
+.phil-text p:last-child{margin-bottom:0}
+@media (max-width:960px){
+  .phil-block,
+  .phil-block.reverse{grid-template-columns:1fr;gap:26px}
+  .phil-block.reverse .phil-img{order:0}
+}
+
 /* =========================================================
    ORIGIN
    ========================================================= */
